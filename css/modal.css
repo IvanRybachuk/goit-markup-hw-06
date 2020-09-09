@@ -38,6 +38,8 @@
 /* Заполнение модалки */
 
 .btn-modal {
+    outline: none;
+    
     position: absolute;
     top: 8px;
     right: 8px;
@@ -102,6 +104,67 @@
 }
 
 
+.form-input-mail::-webkit-input-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-input-mail::-moz-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-input-mail:-moz-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-input-mail:-ms-input-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
 ::-webkit-input-placeholder {
     font-family: Roboto;
     font-style: normal;
@@ -156,9 +219,6 @@
     outline: none;
 }
 
-
-
-
 .text-dec-label {
     position: absolute;
     font-family: Roboto;
@@ -172,7 +232,6 @@
     top: -4px;
 }
 
-
 .accept-text-desc {
     display: inline;
     font-family: Roboto;
@@ -185,10 +244,8 @@
     color: var(--accept-color);
 }
 
-
 .confirmation {
     justify-content: center;
-
     display: flex;
     align-items: center;
 }
@@ -230,13 +287,30 @@
     position: relative;
 }
 
+.icon-form-input {
+    fill: currentColor;
+}
+
 .contact-form-text:hover {
     border-color: #2196F3;
 }
 
-.modal-form-field:hover .icon-form-input {
-    fill: #2196F3;
+.contact-form-text:focus {
+    border-color: #2196F3;
 }
+
+.modal-form-field:hover {
+    color: #2196F3;
+}
+
+.modal-form-field:focus {
+    color: #2196F3;
+}
+
+
+
+
+
 
 .confirmation::before {
     content: "";
