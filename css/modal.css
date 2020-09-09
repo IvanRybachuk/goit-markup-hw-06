@@ -6,7 +6,14 @@
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    transition: all .1s ease;
+    transition: all 250ms linear;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 250ms linear 250ms;
 }
 
 .modal {
@@ -16,23 +23,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: 51s;
     min-width: 528px;
     background-color: var(--white-color);
-    background-color: #fff;
-    transition: transform .3s linear;
+    transition: transform 250ms linear 150ms;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .backdrop.is-hidden .modal {
-    transform: scale(0);
+    transform: translateX(-50%) scale(0);
+    transition: transform 250ms linear 0s;
 }
 
-.is-hidden {
-    transition: all .2s ease;
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
 
 
 /* Заполнение модалки */
@@ -149,62 +152,20 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
-.form-input-mail:-ms-input-placeholder {
+.form-input-mail:-ms-input-placeholder,
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-moz-placeholder,
+:-ms-input-placeholder {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
-    /* identical to box height, or 125% */
-
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
-
     color: rgba(255, 255, 255, 0.6);
-}
-
-
-::-webkit-input-placeholder {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
-
-::-moz-placeholder {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
-
-/* Firefox 19+ */
-:-moz-placeholder {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
-
-/* Firefox 18- */
-:-ms-input-placeholder {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
 }
 
 .contact-form-text {
@@ -287,28 +248,23 @@
     position: relative;
 }
 
-.icon-form-input {
-    fill: currentColor;
-}
 
-.contact-form-text:hover {
-    border-color: #2196F3;
-}
 
+.contact-form-text:hover,
 .contact-form-text:focus {
     border-color: #2196F3;
 }
 
-.modal-form-field:hover {
-    color: #2196F3;
-}
 
+.modal-form-field:hover,
 .modal-form-field:focus {
     color: #2196F3;
 }
 
 
-
+.contact-form-text:focus ~ .icon-form-input {
+    fill: #2196F3;
+}
 
 
 
