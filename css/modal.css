@@ -255,6 +255,10 @@
     border-color: #2196F3;
 }
 
+.contact-form-massage:hover,
+.contact-form-massage:focus {
+    border-color: #2196F3;
+}
 
 .modal-form-field:hover,
 .modal-form-field:focus {
@@ -262,7 +266,8 @@
 }
 
 
-.contact-form-text:focus ~ .icon-form-input {
+.contact-form-text:focus~.icon-form-input,
+.contact-form-text:hover~.icon-form-input {
     fill: #2196F3;
 }
 
@@ -283,4 +288,5 @@
 
 .contact-form-input:checked+.confirmation .confirmation-title {
     color: #2196F3;
+    
 }
